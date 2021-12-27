@@ -37,6 +37,7 @@ jobs:
           echo '###git checkout origin/openwrt-21.02'
           git checkout origin/openwrt-21.02
           git checkout -b openwrt-21.02
+          git pull
           
           #git checkout origin_openwrt/openwrt-21.02
           #git checkout -b origin_openwrt-21.02
@@ -47,6 +48,7 @@ jobs:
           
           echo '###rebase master'
           git checkout master
+          git pull
           git rebase origin_openwrt/master
           git status
           
