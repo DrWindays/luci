@@ -25,6 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: check repository
       - uses: actions/checkout@v2
+
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
       - run: |
           echo "Checkout openwrt offical repository"
           echo `pwd`
@@ -33,10 +37,6 @@ jobs:
           git fetch origin_openwrt
           git rebase origin_openwrt/openwrt-21.02
           git status
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
