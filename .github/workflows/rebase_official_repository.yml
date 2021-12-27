@@ -34,8 +34,9 @@ jobs:
           git remote add origin_openwrt https://github.com/openwrt/luci.git
           echo 'git fetch origin_openwrt'
           git fetch origin_openwrt
-          echo 'git checkout openwrt-21.02'
-          git checkout openwrt-21.02
+          echo 'git checkout origin/openwrt-21.02'
+          git checkout origin/openwrt-21.02
+          git checkout -b openwrt-21.02
           echo 'rebase'
           git rebase origin_openwrt/openwrt-21.02
           git status
