@@ -25,7 +25,7 @@ function index()
 		form("aria2/files"), _("Files"), 2)
 
 	entry({"admin", "services", "aria2", "log"},
-		firstchild(), _("Log"), 3)
+		template("aria2/log_template"), _("Log"), 3)
 
 	entry({"admin", "services", "aria2", "log", "view"},
 		template("aria2/log_template"))
